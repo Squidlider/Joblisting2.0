@@ -1,5 +1,5 @@
 .meter {
-  height: 50px;
+  height: 72px;
   position: relative;
   margin: 10px 0 20px 0;
   background: #00c4b1;
@@ -10,7 +10,9 @@
 }
 
 .meter span {
-  padding: 0.7em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  padding: 1.2em;
   color: white;
 }
 

@@ -1,5 +1,8 @@
+$typeface: "Source Sans Pro", sans-serif;
+$mainfont: "Montserrat", sans-serif;
+
 .meter {
-  height: 50px;
+  height: 72px;
   position: relative;
   margin: 10px 0 20px 0;
   background: #00c4b1;
@@ -10,7 +13,9 @@
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 
   span {
-    padding: 0.7em;
+    font-family: $typeface;
+    font-weight: 700;
+    padding: 1.2em;
     color: white;
   }
 }

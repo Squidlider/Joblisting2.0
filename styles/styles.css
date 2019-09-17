@@ -350,6 +350,7 @@ a.button3:active {
   }
   .button2, a.button23, a.button3 {
     font-size: 12px;
+    margin-right: 0.7em;
   }
   .button2 .fa, a.button23 .fa, a.button3 .fa {
     font-size: initial;
