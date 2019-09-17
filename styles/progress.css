@@ -50,8 +50,8 @@
   background-size: 50px 50px;
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
-  animation: move 2s linear infinite;
   -webkit-animation: move 2s linear infinite;
+  animation: move 2s linear infinite;
   -webkit-border-top-right-radius: 8px;
   -webkit-border-bottom-right-radius: 8px;
   -moz-border-radius-topright: 8px;
@@ -91,8 +91,8 @@
 
 .nostripes > span > span,
 .nostripes > span:after {
-  animation: none;
   -webkit-animation: none;
+  animation: none;
   background-image: none;
 }
 /*# sourceMappingURL=progress.css.map */
