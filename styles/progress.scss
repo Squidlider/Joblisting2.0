@@ -4,7 +4,7 @@ $mainfont: "Montserrat", sans-serif;
 .meter {
   height: 72px;
   position: relative;
-  margin: 10px 0 20px 0;
+  margin: 3px 0 20px 0;
   background: #00c4b1;
   border-radius: 0.5em;
   padding: 0.3em;
@@ -14,8 +14,9 @@ $mainfont: "Montserrat", sans-serif;
 
   span {
     font-family: $typeface;
+    font-size: 130%;
     font-weight: 700;
-    padding: 1.2em;
+    padding: 1em;
     color: white;
   }
 }

@@ -39,10 +39,113 @@ body {
 }
 
 .buttonbar {
+  box-sizing: border-box;
+  min-height: 200px;
   padding: 0;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: none;
+  display: grid;
+  grid-gap: 1.3%;
+  grid-template-columns: 3.3fr 3.3fr 3.3fr;
+  grid-template-rows: 80px 80px 80px;
+  font-family: $typeface;
+  font-size: 0.9em;
+  background-color: #d0d0d000;
+}
+
+.button6 {
+  box-sizing: border-box;
+  padding: 3em;
+  color: white;
+  font-size: 160%;
+  text-align: center;
+  grid-area: 1 / 1 / span 2 / span 3;
+  background-color: #39a864;
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5.5em;
+    transform: skewX(-45deg) translateX(-4em);
+    transition: none;
+  }
+  &:hover {
+    background-color: rgb(72, 182, 114);
+    color: #fff;
+    text-shadow: rgb(207, 207, 207) 1px 0 10px;
+    border-bottom: 4px solid darken(#39a864, 10%);
+    &:before {
+      transform: skewX(-45deg) translateX(34.5em);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.button7 {
+  box-sizing: border-box;
+  padding: 1em 0.2em 1em 0.2em;
+  color: white;
+  font-size: 160%;
+  text-align: center;
+  background-color: #8ee404;
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+
+.button8 {
+  box-sizing: border-box;
+  padding: 1em 0.2em 1em 0.2em;
+  color: white;
+  font-size: 160%;
+  text-align: center;
+  background-color: #8ee404;
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.button9 {
+  box-sizing: border-box;
+  padding: 1em 0.2em 1em 0.2em;
+  color: white;
+  font-size: 160%;
+  text-align: center;
+  background-color: #8ee404;
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.button7,
+.button8,
+.button9,
+.button6 {
+  border-radius: 0.3em;
+}
+
+.button7,
+.button8,
+.button9 {
+  background-color: #00c4b1;
+  color: white;
+  transition: all 0.15s;
+  &:hover {
+    color: #ffffff;
+    border-color: #268f84;
+    background-color: #268f84;
+  }
+  &:active {
+    color: #ffffff;
+    border-color: #268f84;
+  }
+}
+
+.timeleft {
+  box-sizing: border-box;
+  grid-area: 4 / 1 / span 1 / span 3;
 }
 
 .button2 {
@@ -116,16 +219,24 @@ a.button3 {
   min-width: 100%;
 }
 
-.titlecard {
+.infowrapper {
   display: flex;
   .imagecontainer {
     flex: 1;
+    max-height: 100px;
     img {
       width: 70%;
       height: auto;
     }
   }
+}
 
+.infowrapper2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.titlecard {
   .info {
     flex: 2;
 
@@ -139,6 +250,8 @@ a.button3 {
 
     p {
       color: black;
+      font-family: $typeface;
+      line-height: 1.5em;
     }
 
     .date {
@@ -148,8 +261,15 @@ a.button3 {
 }
 
 .info2 {
+  flex: 2;
   font-size: 1rem;
   line-height: 1.4rem;
+}
+
+.info3 {
+  flex: 1;
+  margin-top: 4.5em;
+  color: #6e6e6e;
 }
 
 .button4 {
@@ -212,6 +332,7 @@ a.button3 {
   text-decoration: none;
   width: 40%;
 }
+
 .show,
 .hide {
   position: absolute;
@@ -273,56 +394,11 @@ $color: #2194e0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.button5 {
-  width: 100%;
-  height: 5em;
-  padding: 2em 2em;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: #39a864;
-  font-size: 24px;
-  display: inline-block;
-  border-radius: 0.3em;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  &:before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 3em;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -5.5em;
-    transform: skewX(-45deg) translateX(0);
-    transition: none;
-  }
-  &:hover {
-    background-color: rgb(72, 182, 114);
-    color: #fff;
-    border-bottom: 4px solid darken(#39a864, 10%);
-    &:before {
-      transform: skewX(-45deg) translateX(34.5em);
-      transition: all 0.3s ease-in-out;
-    }
-  }
-}
 
 @media only screen and (max-width: 500px) {
   .cards {
     margin-top: 10em;
     grid-gap: 0.5em;
-  }
-
-  .button2 {
-    font-size: 12px;
-    margin-right: 0.7em;
-
-    .fa {
-      font-size: initial;
-    }
   }
 
   .imagecontainer {
@@ -331,10 +407,30 @@ $color: #2194e0;
     right: 1em;
   }
 
+  .titlecard_container {
+    border-radius: 0;
+  }
+
   .titlecard {
     .info {
       padding: 0;
       margin: 0;
+    }
+  }
+
+  .infowrapper2 {
+    display: block;
+
+    .info3 {
+      margin-top: 1em;
+    }
+  }
+
+  .button7,
+  .button8,
+  .button9 {
+    span {
+      font-size: 0;
     }
   }
 }
